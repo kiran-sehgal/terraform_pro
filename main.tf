@@ -132,7 +132,6 @@ resource "aws_instance" "node3-server" {
 }
 
 ## Create ansible server ======================================================================
-## Create ansible server ======================================================================
 resource "aws_instance" "ansible-server" {
   ami               = "${var.AWS_AMI}"
   instance_type     = "t2.micro"
