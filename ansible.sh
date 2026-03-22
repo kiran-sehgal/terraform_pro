@@ -33,4 +33,8 @@ chown -R  itadmin:itadmin  /home/itadmin/punepro
 cd /home/itadmin/punepro; ansible node1 -a "hostnamectl set-hostname node1.example.com"
 cd /home/itadmin/punepro; ansible node2 -a "hostnamectl set-hostname node2.example.com"
 cd /home/itadmin/punepro; ansible node3 -a "hostnamectl set-hostname node3.example.com"
-
+yum install git -y
+git clone https://github.com/kiran-sehgal/ansible-playbook.git
+cp -rvf ansible-playbook/* /home/itadmin/punepro/
+chown -R  itadmin:itadmin  /home/itadmin/punepro/
+cd /home/itadmin/punepro; ansible-playbook book.yml
